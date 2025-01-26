@@ -23,6 +23,7 @@ app = FastAPI(
     version=settings.API_VERSION,
     openapi_url=f"{settings.API_V1_STR}/openapi.json",
     lifespan=lifespan,
+    root_path="/fastapi"
 )
 
 # Set all CORS origins enabled

@@ -1,26 +1,59 @@
-# Python
-__pycache__/
-*.py[cod]
-venv/
-.env
+# OS
+.DS_Store
+Thumbs.db
 
-# Node
-node_modules/
-build/
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# IDEs
+# IDEs & Editors
 .idea/
 .vscode/
 *.swp
 *.swo
 
-# OS
-.DS_Store
-Thumbs.db
+# Global Node dependencies (frontend)
+node_modules/
+build/
+frontend/node_modules/
+frontend/dist/
+
+# Global Python dependencies (backend)
+__pycache__/
+*.py[cod]
+venv/
+backend/.venv/
+env/
+env3.6/
+env3.7/
+
+# Environment variables
+.env
+.env.production
+.env.development
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+backend/.env
+
+# Logs and Debugging files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Docker
+docker-compose.override.yml
+db_docker/
+minio/
+
+# Archives
+archive/
+
+# Sonarqube & Terraform
+.sonarqube/*
+.scannerwork
+.ruff_cache
+sonarqube/
+sonarqube/extensions
+sonarqube/data
+sonarqube/logs
+.terraform/
