@@ -10,7 +10,7 @@ class PostCRUD:
         return post_doc
     
     @staticmethod
-    async def get_post() -> List[PostDocument]:
+    async def get_posts() -> List[PostDocument]:
         posts = await PostDocument.find_all().sort("-created_at").to_list()
         return posts
     
