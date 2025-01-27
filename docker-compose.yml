@@ -43,9 +43,9 @@ services:
     image: mongo:latest
     container_name: ${PROJECT_NAME}_mongodb
     ports:
-      -"27017:27017"
+      - "27017:27017"
     volumes:
-      -mongodb_data:/data/db
+      - mongodb_data:/data/db
 
 volumes:
   caddy_data:
