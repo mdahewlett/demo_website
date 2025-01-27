@@ -6,11 +6,14 @@ from app.core.config import settings
 from contextlib import asynccontextmanager
 from starlette.middleware.cors import CORSMiddleware
 
+from app.db.mongodb import init_mongodb
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # Startup
     print("startup fastapi")
+    await init_mongodb()
     yield
     # shutdown
     print("shutdown fastapi")
