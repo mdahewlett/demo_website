@@ -18,8 +18,8 @@ class Settings(BaseSettings, extra='ignore'):
     API_V1_STR: str = f"/api/{API_VERSION}"
     WHEATER_URL: str = "https://wttr.in"
 
-    MONGODB_URL: str = "mongodb://localhost:27017"
-    MONGODB_DB_NAME: str = "your_db_name"
+    MONGODB_URL: str = "mongodb://mongodb:27017"
+    MONGODB_DB_NAME: str = "posts_db"
     MONGODB_USERNAME: str | None = None
     MONGODB_PASSWORD: str | None = None
     

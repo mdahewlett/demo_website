@@ -39,6 +39,15 @@ services:
       - caddy_data:/data
       - caddy_config:/config
 
+  mongodb:
+    image: mongo:latest
+    container_name: ${PROJECT_NAME}_mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+
 volumes:
   caddy_data:
   caddy_config:
+  mongodb_data:
